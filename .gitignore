@@ -1,0 +1,18 @@
+# Python
+venv/
+.env
+*.pyc
+__pycache__/
+
+# Node.js
+node_modules/
+.next/
+out/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Локальные настройки редактора
+.vscode/
+.idea/
