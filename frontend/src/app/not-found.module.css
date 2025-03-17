@@ -1,0 +1,30 @@
+.not_found {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.link {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	color: var(--primary-color);
+}
+
+.link::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 0;
+	height: 2px;
+	background-color: var(--primary-color);
+	transition: width 0.3s ease, left 0.3s ease;
+}
+
+.link:hover::after {
+	width: 100%;
+	left: 0;
+}
