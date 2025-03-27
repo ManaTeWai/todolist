@@ -1,7 +1,7 @@
 // components/Menu/Menu.tsx
 "use client";
 
-import { Htag, P } from "../";
+import { Htag, P, Loading } from "../";
 import { MenuItem } from "@/interfaces/menu.interface";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -134,7 +134,7 @@ export const Menu = (): JSX.Element => {
     </ul>
   );
 
-  if (loading) return <P>Loading menu...</P>;
+  if (loading) return <Loading />;
   if (error) return <P color="error">{error}</P>;
 
   return <nav className={styles.menuWrapper}>{renderMenu(menuTree)}</nav>;
