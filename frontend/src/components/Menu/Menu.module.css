@@ -1,0 +1,53 @@
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.submenuList {
+  padding-left: 20px;
+}
+
+.menuItem {
+  margin-bottom: 10px;
+}
+
+.itemWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.link,
+.header {
+  flex-grow: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.3s;
+  color: var(--primary-color);
+}
+
+.arrowOpen {
+  transform: rotate(180deg);
+}
+
+.nested {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.nestedOpen {
+  max-height: 500px; /* Adjust based on your content */
+}
+
+.hasChildren > .itemWrapper > .link {
+  font-weight: 600;
+}
